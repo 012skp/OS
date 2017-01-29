@@ -24,7 +24,7 @@ int main(){
 			printf("I am child pid =%d, pgid = %d\n",getpid(),getpgid(0)); 
 			prctl(PR_SET_PDEATHSIG,SIGTERM);// asks kernel to deliever SIGTERM when parent terminates...
 			printf("I am child doing infinite work...");
-			while(1);
+			while(1) sleep(1);
 			
 	}
 	else{
