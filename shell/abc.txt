@@ -1,0 +1,5 @@
+	printf("Hello World..\n");
+	printf("Arguments are..\n");
+	for(i=1;i<argc;i++)printf("%s\n",argv[i]);
+	printf("no of strings = %d\n",cnt);
+		printf("%s\n",sss);

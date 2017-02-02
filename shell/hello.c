@@ -16,9 +16,11 @@ int main(int argc, char* argv[]){
 	printf("no of strings = %d\n",cnt);
 	while(sss!= NULL){
 		printf("%s\n",sss);
-		sleep(1);
 		sss = strtok(NULL," ");
 	}
+
+	int d;
+	scanf("%d",&d);
 	/*
 	char prog[] = "cat";
 	char* const args[] = {prog,"shell.cc",NULL};

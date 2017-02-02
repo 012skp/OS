@@ -70,7 +70,7 @@ int main(){
 			if(fp == NULL){ printf("%s failed..\n",buff); exit(1);}
 			fread(str,256,1,fp);
 			if(atoi(str) > 2){
-				printf("You have childrens, first kill them then exit...\n");
+				printf("You have %d childrens, first kill them then exit...\n",atoi(str)-2);
 				strcpy(buff,"jobs");
 			}
 			else break;
@@ -84,6 +84,7 @@ int main(){
 			char str[300];
 			FILE *fp = popen(buff,"r");
 			if(fp == NULL){ printf("%s failed..\n",buff); exit(1);}
+			///*
 			char ch;
 			int flag = 0;
 			while(1){
@@ -96,6 +97,7 @@ int main(){
 				if(ch == '\n') break;
 			}
 			if(flag) continue;
+			//*/
 			while(!feof(fp)){
 				bzero(str,256);
 				fread(str,256,1,fp);
@@ -129,8 +131,8 @@ int main(){
 		else if(redirection(buff)) system(buff);
 		else if(background(buff)){
 			char nbuff[100];
+			bzero(nbuff,256);
 			strncpy(nbuff,buff,strlen(buff)-1);
-			printf("now command is:%s\n",nbuff);
 			int pid = fork();
 			if(pid == 0){
 				execute_command(nbuff);
