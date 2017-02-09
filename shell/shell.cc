@@ -24,7 +24,7 @@ bool redirection(char buff[]){
 bool background(char str[]){
 	for(int i=0;i<strlen(str);i++) if(str[i] == '&') return 1;
 	return 0;
-} 	X
+} 	
 
 void execute_command(char buff[]){
 	char str[300];
