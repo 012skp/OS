@@ -129,6 +129,7 @@ int main(){
             getcwd(pwd,sizeof(pwd));
 		}
 		else if(redirection(buff)) system(buff);
+		
 		else if(background(buff)){
 			char nbuff[100];
 			bzero(nbuff,256);
@@ -140,6 +141,7 @@ int main(){
 			}
 			printf("Process created with pid: %d\n",pid);
 		}
+
 		else{
 			execute_command(buff);
 		}
