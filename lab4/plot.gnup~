@@ -1,0 +1,13 @@
+set output '1.png'
+set terminal png
+set xrange [0:]
+set yrange [0:]
+plot 'output' with linespoints
+
+
+#set output1 '2.png'
+#set terminal png
+#set xrange [0:]	
+#set yrange [0:]
+#plot 'output1' with linespoints
+
