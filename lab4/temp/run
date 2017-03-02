@@ -1,0 +1,2 @@
+./d
+gnuplot -e "load 'plot.gnup'; load 'plot1.gnup'"
